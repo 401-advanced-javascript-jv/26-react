@@ -1,19 +1,7 @@
 import React from 'react';
 
-// Vinicio - this is just a different way of creating 'dummy components' with functions
-const Header = () => {
-  return (
-    <header>
-      <h1>Header</h1>
-    </header>
-  );
-};
-
-class Footer extends React.Component {
-  render() {
-    return <footer>&copy; 2018 Code Fellows</footer>;
-  }
-}
+import Header from './header.js';
+import Footer from './footer.js';
 
 class Main extends React.Component {
   constructor(props) {
@@ -23,8 +11,8 @@ class Main extends React.Component {
     };
   }
 
-  handleButtonClick = e => {
-    e.preventDefault();
+  handleButtonClick = (event) => {
+    event.preventDefault();
     this.setState({ stuff: Math.floor(Math.random() * 20 + 1) });
   };
 
