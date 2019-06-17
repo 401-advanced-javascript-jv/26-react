@@ -13,7 +13,7 @@ class Counter extends React.Component {
 
   handleButtonClick = (event) => {
     event.preventDefault();
-    this.setState({ counter: Math.floor(Math.random() * 20 + 1) });
+    this.setState({ counter: ++this.state.counter });
   };
 
   render() {
