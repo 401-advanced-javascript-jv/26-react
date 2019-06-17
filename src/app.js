@@ -25,8 +25,8 @@ class Counter extends React.Component {
     return (
       <div>
         <h4>{this.state.counter}</h4>
-        <button onClick={this.incrementCounter}>Increment</button>
-        <button onClick={this.decrementCounter}>Decrement</button>
+        <a href='#' onClick={this.incrementCounter}>Increment</a>
+        <a href='#' onClick={this.decrementCounter}>Decrement</a>
       </div>
     );
   }
