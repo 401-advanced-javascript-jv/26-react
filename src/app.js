@@ -11,16 +11,22 @@ class Counter extends React.Component {
     };
   }
 
-  handleButtonClick = (event) => {
+  incrementCounter = (event) => {
     event.preventDefault();
     this.setState({ counter: ++this.state.counter });
+  };
+
+  decrementCounter = (event) => {
+    event.preventDefault();
+    this.setState({counter: --this.state.counter });
   };
 
   render() {
     return (
       <div>
         <h4>{this.state.counter}</h4>
-        <button onClick={this.handleButtonClick}>Click Me</button>
+        <button onClick={this.incrementCounter}>Increment</button>
+        <button onClick={this.decrementCounter}>Decrement</button>
       </div>
     );
   }
