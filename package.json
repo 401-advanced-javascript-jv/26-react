@@ -1,0 +1,37 @@
+{
+  "name": "26-react",
+  "version": "1.0.0",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-jsonschema-form": "1.0.6",
+    "react-redux": "5.1.1",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "2.1.1",
+    "superagent": "latest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "author": "Jesse Van Volkinburg <vanvoljg@gmail.com>",
+  "license": "MIT",
+  "description": ""
+}
