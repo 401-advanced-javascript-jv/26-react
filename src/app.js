@@ -5,6 +5,10 @@ import './app.scss';
 import Header from './header.js';
 import Footer from './footer.js';
 
+/**
+ * Counter class - displays a number that increments and decrements based on
+ * clicks
+ */
 class Counter extends React.Component {
   constructor(props) {
     super(props);
@@ -20,21 +24,24 @@ class Counter extends React.Component {
 
   handleDecrement = (event) => {
     event.preventDefault();
-    this.setState({counter: this.state.counter - 1 });
+    this.setState({ counter: this.state.counter - 1 });
   };
 
   render() {
-    let counterClass = this.state.counter < 0 ? 'negative' : 'positive';
+    const counterClass = this.state.counter < 0 ? 'negative' : 'positive';
     return (
       <div>
         <h4 className={counterClass}>{this.state.counter}</h4>
-        <a href='#' onClick={this.handleIncrement}>Increment</a>
-        <a href='#' onClick={this.handleDecrement}>Decrement</a>
+        <a href='/' onClick={this.handleIncrement}>Increment</a>
+        <a href='/' onClick={this.handleDecrement}>Decrement</a>
       </div>
     );
   }
 }
 
+/**
+ * App component to build the app
+ */
 class App extends React.Component {
   render() {
     return (

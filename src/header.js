@@ -1,6 +1,8 @@
 import React from 'react';
 
-// Vinicio - this is just a different way of creating 'dummy components' with functions
+/**
+ * Header component
+ */
 class Header extends React.Component {
   render() {
     return (
