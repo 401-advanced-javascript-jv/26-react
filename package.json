@@ -17,6 +17,9 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-jest": "^22.6.4",
     "prettier": "^1.18.2"
   },
   "prettier": {
@@ -29,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint '**/*.js'",
+    "lintfix": "eslint --fix '**/*.js'"
   },
   "author": "Jesse Van Volkinburg <vanvoljg@gmail.com>",
   "license": "MIT",
