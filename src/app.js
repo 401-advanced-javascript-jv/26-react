@@ -13,22 +13,23 @@ class Counter extends React.Component {
     };
   }
 
-  incrementCounter = (event) => {
+  handleIncrement = (event) => {
     event.preventDefault();
-    this.setState({ counter: ++this.state.counter });
+    this.setState({ counter: this.state.counter + 1 });
   };
 
-  decrementCounter = (event) => {
+  handleDecrement = (event) => {
     event.preventDefault();
-    this.setState({counter: --this.state.counter });
+    this.setState({counter: this.state.counter - 1 });
   };
 
   render() {
+    let counterClass = this.state.counter < 0 ? 'negative' : 'positive';
     return (
       <div>
-        <h4>{this.state.counter}</h4>
-        <a href='#' onClick={this.incrementCounter}>Increment</a>
-        <a href='#' onClick={this.decrementCounter}>Decrement</a>
+        <h4 className={counterClass}>{this.state.counter}</h4>
+        <a href='#' onClick={this.handleIncrement}>Increment</a>
+        <a href='#' onClick={this.handleDecrement}>Decrement</a>
       </div>
     );
   }
