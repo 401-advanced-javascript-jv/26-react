@@ -1,49 +1,53 @@
 import React from 'react';
 
-// Vinicio - this is just a different way of creating 'dummy components' with functions
-const Header = () => {
-  return (
-    <header>
-      <h1>Header</h1>
-    </header>
-  );
-};
+import './app.scss';
 
-class Footer extends React.Component {
-  render() {
-    return <footer>&copy; 2018 Code Fellows</footer>;
-  }
-}
+import Header from './header';
+import Footer from './footer';
 
-class Main extends React.Component {
+/**
+ * Counter class - displays a number that increments and decrements based on
+ * clicks
+ */
+class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      stuff: 0,
+      counter: 0,
     };
   }
 
-  handleButtonClick = e => {
-    e.preventDefault();
-    this.setState({ stuff: Math.floor(Math.random() * 20 + 1) });
+  handleIncrement = (event) => {
+    event.preventDefault();
+    this.setState({ counter: this.state.counter + 1 });
+  };
+
+  handleDecrement = (event) => {
+    event.preventDefault();
+    this.setState({ counter: this.state.counter - 1 });
   };
 
   render() {
+    const counterClass = this.state.counter < 0 ? 'negative' : 'positive';
     return (
       <div>
-        <h4>{this.state.stuff}</h4>
-        <button onClick={this.handleButtonClick}>Click Me</button>
+        <h4 className={counterClass}>{this.state.counter}</h4>
+        <a href='/' onClick={this.handleIncrement}>Increment</a>
+        <a href='/' onClick={this.handleDecrement}>Decrement</a>
       </div>
     );
   }
 }
 
+/**
+ * App component to build the app
+ */
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
         <Header />
-        <Main />
+        <Counter />
         <Footer />
       </React.Fragment>
     );
