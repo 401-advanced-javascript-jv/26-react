@@ -2,8 +2,8 @@ import React from 'react';
 
 import './app.scss';
 
-import Header from './header.js';
-import Footer from './footer.js';
+import Header from './header';
+import Footer from './footer';
 
 /**
  * Counter class - displays a number that increments and decrements based on
